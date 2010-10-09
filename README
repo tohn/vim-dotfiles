@@ -1,0 +1,9 @@
+Vim-Dotfiles
+by Yannic Haupenthal
+
+This repos contains my vim dotfiles, i.e. my .vimrc.
+
+To link one or all files to your home, execute:
+ln -s /path/to/repos/.vimrc ~/.vimrc
+or:
+ln -s /path/to/repos/.vim* ~
