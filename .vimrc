@@ -4,13 +4,15 @@ map <F9> <C-]>
 " copy to x-clipboard 
 set go+=a 
 
-"Mit [F8] Automatisches Einruecken und Treppeneffekt beim Copy & Paste 
-"verhindern 
+" Mit [F8] Automatisches Einruecken und Treppeneffekt beim Copy & Paste verhindern
 set pastetoggle=<F8> 
 " set pastetoggle
 
-"Mit [F7] Zeilennummerierung ein/ausschalten 
+" Mit [F7] Zeilennummerierung ein/ausschalten 
 :nmap <F7> :set invnumber <CR> 
+
+" show numbers
+set number
 
 " autocomplete fuer klammern und co 
 ":filetype on
@@ -57,6 +59,9 @@ set autoindent
 
 " tabulator weite
 "set tabstop=4 
+set ts=8                                                                
+set noexpandtab
+" :retab!
 
 " wir wollen vim und nicht vi  
 set nocompatible 
@@ -150,3 +155,21 @@ set backupdir=/home/benjo/.vim_swp/
                                                                 
 " http://vim.wikia.com/wiki/Fix_email_quotations_with_long_lines
 "set comments=s1:/*,mb:*,ex:*/,://,b:#,:%,:XCOMM,n:>,fb:-
+
+" http://www.uninformativ.de/?ndo=single&newsid=120                     
+" color column // erst in v7.3                                          
+"set colorcolumn=72                                                      
+" Umbruch                                                               
+"set tw=72                                                              
+" schnellere klammerpaarhervorhebung                                    
+let loaded_matchparen=1                                                 
+set showmatch                                                           
+" kein auto-backup                                                      
+"set nobackup                                                           
+" keine viminfo benutzen                                                
+"set viminfo=""                                                         
+" schoenerer workflow: wartet nach escape nicht so ewig                 
+set timeoutlen=300                                                      
+" farben                                                                
+hi  Normal       cterm=NONE   ctermfg=229  ctermbg=232                  
+hi  ColorColumn  ctermbg=Black  
