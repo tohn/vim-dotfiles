@@ -62,7 +62,7 @@ set autoindent
 
 " tabulator weite
 "set tabstop=4
-set ts=8
+set ts=4
 set noexpandtab
 " :retab!
 
@@ -101,9 +101,9 @@ au BufRead /tmp/mutt-* set tw=72
 "set noswapfile
 
 " Zeilenumbruch nach 80 Zeichen
-"set tw=80
+set tw=80
 "set textwidth=10
-"set wrapmargin=80
+set wrapmargin=80
 "set nowrap
 
 " mappt Reformat auf ^j im Input-Mode
@@ -190,3 +190,18 @@ function! s:align()
     call search(repeat('[^|]*|',column).'\s\{-\}'.repeat('.',position),'ce',line('.'))
   endif
 endfunction
+
+" vimcasts.org # 30
+nnoremap <F5> :GundoToggle<CR>
+
+" http://zinformatik.de/tipps-tricks/interessante-programme/plugins-erweiterungen/vim-plugin-taglist-splitscreen-mit-ubersicht-der-funkionen-in-einer-datei/
+function OpenTlist()
+    let myfile = expand("%")
+    let myfiletype = expand("%:e")
+    if myfiletype == "pl" || myfiletype == "java" || myfiletype == "c" || myfile == "cpp" 
+        Tlist
+    end
+endfunction
+au BufRead * call OpenTlist()
+map <F3> :TlistToggle<cr>
+map <F4> :w<cr>:TlistUpdate<cr>
