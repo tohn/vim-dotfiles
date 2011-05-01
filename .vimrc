@@ -62,7 +62,7 @@ set autoindent
 
 " tabulator weite
 "set tabstop=4
-set ts=8
+set ts=4
 set noexpandtab
 " :retab!
 
@@ -101,9 +101,9 @@ au BufRead /tmp/mutt-* set tw=72
 "set noswapfile
 
 " Zeilenumbruch nach 80 Zeichen
-"set tw=80
+set tw=80
 "set textwidth=10
-"set wrapmargin=80
+set wrapmargin=80
 "set nowrap
 
 " mappt Reformat auf ^j im Input-Mode
@@ -161,7 +161,7 @@ set backupdir=~/.vim_swp/
 
 " http://www.uninformativ.de/?ndo=single&newsid=120
 " color column // erst in v7.3
-"set colorcolumn=72
+set colorcolumn=80
 " Umbruch
 "set tw=72
 " schnellere klammerpaarhervorhebung
