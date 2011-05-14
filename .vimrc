@@ -195,13 +195,13 @@ endfunction
 nnoremap <F5> :GundoToggle<CR>
 
 " http://zinformatik.de/tipps-tricks/interessante-programme/plugins-erweiterungen/vim-plugin-taglist-splitscreen-mit-ubersicht-der-funkionen-in-einer-datei/
-function OpenTlist()
-    let myfile = expand("%")
-    let myfiletype = expand("%:e")
-    if myfiletype == "pl" || myfiletype == "java" || myfiletype == "c" || myfile == "cpp" 
-        Tlist
-    end
-endfunction
-au BufRead * call OpenTlist()
-map <F3> :TlistToggle<cr>
-map <F4> :w<cr>:TlistUpdate<cr>
+"function OpenTlist()
+"    let myfile = expand("%")
+"    let myfiletype = expand("%:e")
+"    if myfiletype == "pl" || myfiletype == "java" || myfiletype == "c" || myfile == "cpp" 
+"        Tlist
+"    end
+"endfunction
+"au BufRead * call OpenTlist()
+"map <F3> :TlistToggle<cr>
+"map <F4> :w<cr>:TlistUpdate<cr>
