@@ -84,10 +84,10 @@ set hlsearch
 " ???
 " set paste
 
-let g:miniBufExplMapWindowNavVim = 1
-let g:miniBufExplMapWindowNavArrows = 1
-let g:miniBufExplMapCTabSwitchBufs = 1
-let g:miniBufExplModSelTarget = 1
+"let g:miniBufExplMapWindowNavVim = 1
+"let g:miniBufExplMapWindowNavArrows = 1
+"let g:miniBufExplMapCTabSwitchBufs = 1
+"let g:miniBufExplModSelTarget = 1
 
 " suckless.org : ii
 "map t1 :.w >> \#test/in<cr>dd
@@ -178,21 +178,21 @@ hi  Normal       cterm=NONE   ctermfg=229  ctermbg=232
 hi  ColorColumn  ctermbg=Black
 
 " vimcasts.org # 29 (gist)
-inoremap <silent> <Bar>   <Bar><Esc>:call <SID>align()<CR>a
+"inoremap <silent> <Bar>   <Bar><Esc>:call <SID>align()<CR>a
 
-function! s:align()
-  let p = '^\s*|\s.*\s|\s*$'
-  if exists(':Tabularize') && getline('.') =~# '^\s*|' && (getline(line('.')-1) =~# p || getline(line('.')+1) =~# p)
-    let column = strlen(substitute(getline('.')[0:col('.')],'[^|]','','g'))
-    let position = strlen(matchstr(getline('.')[0:col('.')],'.*|\s*\zs.*'))
-    Tabularize/|/l1
-    normal! 0
-    call search(repeat('[^|]*|',column).'\s\{-\}'.repeat('.',position),'ce',line('.'))
-  endif
-endfunction
+"function! s:align()
+"  let p = '^\s*|\s.*\s|\s*$'
+"  if exists(':Tabularize') && getline('.') =~# '^\s*|' && (getline(line('.')-1) =~# p || getline(line('.')+1) =~# p)
+"    let column = strlen(substitute(getline('.')[0:col('.')],'[^|]','','g'))
+"    let position = strlen(matchstr(getline('.')[0:col('.')],'.*|\s*\zs.*'))
+"    Tabularize/|/l1
+"    normal! 0
+"    call search(repeat('[^|]*|',column).'\s\{-\}'.repeat('.',position),'ce',line('.'))
+"  endif
+"endfunction
 
 " vimcasts.org # 30
-nnoremap <F5> :GundoToggle<CR>
+"nnoremap <F5> :GundoToggle<CR>
 
 " http://zinformatik.de/tipps-tricks/interessante-programme/plugins-erweiterungen/vim-plugin-taglist-splitscreen-mit-ubersicht-der-funkionen-in-einer-datei/
 "function OpenTlist()
