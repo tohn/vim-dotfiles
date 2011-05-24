@@ -205,3 +205,10 @@ hi  ColorColumn  ctermbg=Black
 "au BufRead * call OpenTlist()
 "map <F3> :TlistToggle<cr>
 "map <F4> :w<cr>:TlistUpdate<cr>
+
+" http://dsiw.wordpress.com/2011/05/18/kopieren-mit-vim/
+vmap <C-c> "+y
+imap <C-v> "+p
+
+" color
+colorscheme desert
