@@ -161,7 +161,7 @@ set backupdir=~/.vim_swp/
 
 " http://www.uninformativ.de/?ndo=single&newsid=120
 " color column // erst in v7.3
-set colorcolumn=80
+"set colorcolumn=80
 " Umbruch
 "set tw=72
 " schnellere klammerpaarhervorhebung
